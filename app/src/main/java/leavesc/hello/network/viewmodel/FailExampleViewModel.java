@@ -4,11 +4,11 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Observer;
 import android.support.annotation.Nullable;
 
-import leavesc.hello.network.http.basis.callback.RequestMultiplyCallback;
-import leavesc.hello.network.http.basis.exception.base.BaseException;
+import leavesc.hello.library.http.callback.RequestMultiplyCallback;
+import leavesc.hello.library.http.exception.base.BaseException;
+import leavesc.hello.library.viewmodel.BaseViewModel;
 import leavesc.hello.network.http.datasource.FailExampleDataSource;
 import leavesc.hello.network.http.repo.FailExampleRepo;
-import leavesc.hello.network.viewmodel.base.BaseViewModel;
 
 /**
  * 作者：leavesC

@@ -2,6 +2,8 @@ package leavesc.hello.network;
 
 import android.app.Application;
 
+import leavesc.hello.library.holder.ContextHolder;
+
 /**
  * 作者：leavesC
  * 时间：2018/10/26 23:24
@@ -17,6 +19,7 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         appContext = this;
+        ContextHolder.setContext(this);
     }
 
     public static Application getAppContext() {

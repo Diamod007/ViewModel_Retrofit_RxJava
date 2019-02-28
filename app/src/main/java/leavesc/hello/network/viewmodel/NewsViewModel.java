@@ -4,10 +4,10 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Observer;
 import android.support.annotation.Nullable;
 
+import leavesc.hello.library.viewmodel.BaseViewModel;
 import leavesc.hello.network.http.datasource.NewsDataSource;
-import leavesc.hello.network.http.repo.NewsRepo;
 import leavesc.hello.network.model.NewsPack;
-import leavesc.hello.network.viewmodel.base.BaseViewModel;
+import leavesc.hello.network.http.repo.NewsRepo;
 
 /**
  * 作者：leavesC

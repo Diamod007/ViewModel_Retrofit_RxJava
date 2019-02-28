@@ -4,7 +4,7 @@ import android.arch.lifecycle.ViewModel;
 import android.os.Bundle;
 import android.view.View;
 
-import leavesc.hello.network.view.BaseActivity;
+import leavesc.hello.library.view.BaseActivity;
 
 /**
  * 作者：leavesC

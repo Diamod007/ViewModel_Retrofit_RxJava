@@ -13,8 +13,8 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
-import leavesc.hello.network.http.basis.BaseRepo;
-import leavesc.hello.network.http.basis.callback.RequestCallback;
+import leavesc.hello.library.http.BaseRepo;
+import leavesc.hello.library.http.callback.RequestCallback;
 import leavesc.hello.network.http.datasource.base.IQrCodeDataSource;
 import leavesc.hello.network.model.QrCode;
 

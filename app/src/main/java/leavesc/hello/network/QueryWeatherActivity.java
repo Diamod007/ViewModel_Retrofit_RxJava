@@ -8,10 +8,10 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 
+import leavesc.hello.library.view.BaseActivity;
+import leavesc.hello.library.viewmodel.LViewModelProviders;
 import leavesc.hello.network.model.Weather;
-import leavesc.hello.network.view.BaseActivity;
 import leavesc.hello.network.viewmodel.WeatherViewModel;
-import leavesc.hello.network.viewmodel.base.LViewModelProviders;
 
 /**
  * 作者：leavesC

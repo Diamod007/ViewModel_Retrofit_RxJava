@@ -4,10 +4,10 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Observer;
 import android.support.annotation.Nullable;
 
+import leavesc.hello.library.viewmodel.BaseViewModel;
 import leavesc.hello.network.http.datasource.QrCodeDataSource;
-import leavesc.hello.network.http.repo.QrCodeRepo;
 import leavesc.hello.network.model.QrCode;
-import leavesc.hello.network.viewmodel.base.BaseViewModel;
+import leavesc.hello.network.http.repo.QrCodeRepo;
 
 /**
  * 作者：leavesC

@@ -7,15 +7,17 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 
+import leavesc.hello.library.view.BaseActivity;
+import leavesc.hello.library.viewmodel.LViewModelProviders;
 import leavesc.hello.network.model.NewsPack;
-import leavesc.hello.network.view.BaseActivity;
 import leavesc.hello.network.viewmodel.NewsViewModel;
-import leavesc.hello.network.viewmodel.base.LViewModelProviders;
 
 /**
  * 作者：leavesC
- * 时间：2019/1/30 0:54
+ * 时间：2019/2/28 23:36
  * 描述：
+ * GitHub：https://github.com/leavesC
+ * Blog：https://www.jianshu.com/u/9df45b87cfdf
  */
 public class QueryNewsActivity extends BaseActivity {
 

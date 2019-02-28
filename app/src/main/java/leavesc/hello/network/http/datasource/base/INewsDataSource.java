@@ -1,6 +1,6 @@
 package leavesc.hello.network.http.datasource.base;
 
-import leavesc.hello.network.http.basis.callback.RequestCallback;
+import leavesc.hello.library.http.callback.RequestCallback;
 import leavesc.hello.network.model.NewsPack;
 
 /**

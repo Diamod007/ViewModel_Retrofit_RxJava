@@ -4,14 +4,16 @@ import android.arch.lifecycle.ViewModel;
 import android.os.Bundle;
 import android.view.View;
 
-import leavesc.hello.network.view.BaseActivity;
+import leavesc.hello.library.view.BaseActivity;
+import leavesc.hello.library.viewmodel.LViewModelProviders;
 import leavesc.hello.network.viewmodel.FailExampleViewModel;
-import leavesc.hello.network.viewmodel.base.LViewModelProviders;
 
 /**
  * 作者：leavesC
- * 时间：2019/1/30 12:58
+ * 时间：2019/2/28 23:36
  * 描述：
+ * GitHub：https://github.com/leavesC
+ * Blog：https://www.jianshu.com/u/9df45b87cfdf
  */
 public class FailExampleActivity extends BaseActivity {
 

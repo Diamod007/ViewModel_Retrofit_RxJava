@@ -2,9 +2,9 @@ package leavesc.hello.network.http.repo;
 
 import android.arch.lifecycle.MutableLiveData;
 
-import leavesc.hello.network.http.basis.BaseRepo;
-import leavesc.hello.network.http.basis.callback.RequestCallback;
-import leavesc.hello.network.http.basis.callback.RequestMultiplyCallback;
+import leavesc.hello.library.http.BaseRepo;
+import leavesc.hello.library.http.callback.RequestCallback;
+import leavesc.hello.library.http.callback.RequestMultiplyCallback;
 import leavesc.hello.network.http.datasource.base.IFailExampleDataSource;
 
 /**

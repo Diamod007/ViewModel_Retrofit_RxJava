@@ -1,10 +1,10 @@
 package leavesc.hello.network.http.datasource;
 
-import leavesc.hello.network.http.basis.BaseRemoteDataSource;
-import leavesc.hello.network.http.basis.callback.RequestCallback;
+import leavesc.hello.library.http.BaseRemoteDataSource;
+import leavesc.hello.library.http.callback.RequestCallback;
+import leavesc.hello.library.viewmodel.BaseViewModel;
 import leavesc.hello.network.http.datasource.base.IFailExampleDataSource;
 import leavesc.hello.network.http.service.ApiService;
-import leavesc.hello.network.viewmodel.base.BaseViewModel;
 
 /**
  * 作者：leavesC

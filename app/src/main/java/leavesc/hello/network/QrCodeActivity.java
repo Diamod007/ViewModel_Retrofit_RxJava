@@ -6,10 +6,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import leavesc.hello.library.viewmodel.LViewModelProviders;
 import leavesc.hello.network.model.QrCode;
-import leavesc.hello.network.view.BaseActivity;
+import leavesc.hello.library.view.BaseActivity;
 import leavesc.hello.network.viewmodel.QrCodeViewModel;
-import leavesc.hello.network.viewmodel.base.LViewModelProviders;
 
 /**
  * 作者：leavesC
