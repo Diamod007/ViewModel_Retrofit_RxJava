@@ -1,3 +1,11 @@
+>  以下内容于 2019-03-01 发表
+
+一开始我是把网络请求封装逻辑与所有的请求示例代码放在一起的，即 Project 中只有一个 Module，这样可能不利于读者理解。因此，我将关于网络请求的封装逻辑下移到了 Library 中，并简化了一些逻辑，希望对你有所帮助
+
+![](https://upload-images.jianshu.io/upload_images/2552605-3b0e7a3d451b13e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+> 以下内容于 2019-02-03 发表
+
 ### 一、前言
 
 现如今 Android 领域流行的网络请求框架基本都是用 **Retrofit 加 RxJava** 来搭配构建的，而以 **ViewModel + LiveData + Retrofit + RxJava** 来构建请求框架的例子要相对少得多。而本文就是以这四者作为基础组件，介绍如何一步步封装实现自己的网络请求框架（本文实现的例子不仅仅只是一个网络请求框架，同时也是在介绍应用的架构模式），希望对你有所帮助
