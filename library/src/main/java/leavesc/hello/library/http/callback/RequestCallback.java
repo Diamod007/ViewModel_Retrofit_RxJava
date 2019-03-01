@@ -1,5 +1,7 @@
 package leavesc.hello.library.http.callback;
 
+import leavesc.hello.library.holder.ToastHolder;
+
 /**
  * 作者：leavesC
  * 时间：2018/10/27 20:53
@@ -10,5 +12,9 @@ package leavesc.hello.library.http.callback;
 public interface RequestCallback<T> {
 
     void onSuccess(T t);
+
+    default void showToast(String message) {
+        ToastHolder.showToast(message);
+    }
 
 }

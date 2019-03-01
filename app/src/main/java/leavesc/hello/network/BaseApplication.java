@@ -2,7 +2,12 @@ package leavesc.hello.network;
 
 import android.app.Application;
 
-import leavesc.hello.library.holder.ContextHolder;
+import java.util.ArrayList;
+import java.util.List;
+
+import leavesc.hello.library.Leaves;
+import leavesc.hello.network.http.interceptor.FilterInterceptor;
+import okhttp3.Interceptor;
 
 /**
  * 作者：leavesC
@@ -19,7 +24,13 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         appContext = this;
-        ContextHolder.setContext(this);
+        initLeaves();
+    }
+
+    private void initLeaves() {
+        List<Interceptor> interceptorList = new ArrayList<>();
+        interceptorList.add(new FilterInterceptor());
+        Leaves.INSTANCE.init(this).log(true).addInterceptor(interceptorList);
     }
 
     public static Application getAppContext() {

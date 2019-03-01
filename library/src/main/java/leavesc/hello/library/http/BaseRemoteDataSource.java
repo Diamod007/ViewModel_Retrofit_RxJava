@@ -32,8 +32,8 @@ public abstract class BaseRemoteDataSource {
         this.baseViewModel = baseViewModel;
     }
 
-    protected <T> T getService(Class<T> clz) {
-        return RetrofitManagement.getInstance().getService(clz);
+    private <T> T getService(Class<T> clz) {
+        return RetrofitManagement.getInstance().getService(clz, "");
     }
 
     protected <T> T getService(Class<T> clz, String host) {
@@ -45,11 +45,11 @@ public abstract class BaseRemoteDataSource {
     }
 
     protected <T> void execute(Observable observable, RequestCallback<T> callback) {
-        execute(observable, new BaseSubscriber<>(baseViewModel, callback), true);
+        execute(observable, new BaseSubscriber<>(callback), true);
     }
 
     protected <T> void execute(Observable observable, RequestMultiplyCallback<T> callback) {
-        execute(observable, new BaseSubscriber<>(baseViewModel, callback), true);
+        execute(observable, new BaseSubscriber<>(callback), true);
     }
 
     public void executeWithoutDismiss(Observable observable, Observer observer) {

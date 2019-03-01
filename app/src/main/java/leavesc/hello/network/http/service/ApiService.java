@@ -1,8 +1,8 @@
 package leavesc.hello.network.http.service;
 
 import io.reactivex.Observable;
-import leavesc.hello.library.http.config.HttpConfig;
 import leavesc.hello.library.http.model.BaseResponseBody;
+import leavesc.hello.network.http.config.HttpConfig;
 import leavesc.hello.network.model.NewsPack;
 import leavesc.hello.network.model.QrCode;
 import leavesc.hello.network.model.Weather;

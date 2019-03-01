@@ -1,14 +1,10 @@
 package leavesc.hello.library.http;
 
-import android.widget.Toast;
-
 import io.reactivex.observers.DisposableObserver;
-import leavesc.hello.library.holder.ContextHolder;
 import leavesc.hello.library.http.callback.RequestCallback;
 import leavesc.hello.library.http.callback.RequestMultiplyCallback;
 import leavesc.hello.library.http.config.HttpCode;
 import leavesc.hello.library.http.exception.base.BaseException;
-import leavesc.hello.library.viewmodel.BaseViewModel;
 
 /**
  * 作者：leavesC
@@ -19,16 +15,9 @@ import leavesc.hello.library.viewmodel.BaseViewModel;
  */
 public class BaseSubscriber<T> extends DisposableObserver<T> {
 
-    private BaseViewModel baseViewModel;
-
     private RequestCallback<T> requestCallback;
 
-    public BaseSubscriber(BaseViewModel baseViewModel) {
-        this.baseViewModel = baseViewModel;
-    }
-
-    BaseSubscriber(BaseViewModel baseViewModel, RequestCallback<T> requestCallback) {
-        this.baseViewModel = baseViewModel;
+    BaseSubscriber(RequestCallback<T> requestCallback) {
         this.requestCallback = requestCallback;
     }
 
@@ -50,10 +39,8 @@ public class BaseSubscriber<T> extends DisposableObserver<T> {
                 callback.onFail(new BaseException(HttpCode.CODE_UNKNOWN, e.getMessage()));
             }
         } else {
-            if (baseViewModel == null) {
-                Toast.makeText(ContextHolder.getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-            } else {
-                baseViewModel.showToast(e.getMessage());
+            if (requestCallback != null) {
+                requestCallback.showToast(e.getMessage());
             }
         }
     }

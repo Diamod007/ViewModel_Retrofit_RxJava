@@ -17,10 +17,13 @@ public class BaseViewModel extends ViewModel implements IViewModelAction {
 
     private MutableLiveData<BaseActionEvent> actionLiveData;
 
+    private BaseActionEvent actionEvent;
+
     protected LifecycleOwner lifecycleOwner;
 
     public BaseViewModel() {
         actionLiveData = new MutableLiveData<>();
+        actionEvent = new BaseActionEvent(BaseActionEvent.DEFAULT);
     }
 
     @Override
@@ -30,31 +33,34 @@ public class BaseViewModel extends ViewModel implements IViewModelAction {
 
     @Override
     public void startLoading(String message) {
-        BaseActionEvent baseActionEvent = new BaseActionEvent(BaseActionEvent.SHOW_LOADING_DIALOG);
-        baseActionEvent.setMessage(message);
-        actionLiveData.setValue(baseActionEvent);
+        actionEvent.setAction(BaseActionEvent.SHOW_LOADING_DIALOG);
+        actionEvent.setMessage(message);
+        actionLiveData.setValue(actionEvent);
     }
 
     @Override
     public void dismissLoading() {
-        actionLiveData.setValue(new BaseActionEvent(BaseActionEvent.DISMISS_LOADING_DIALOG));
+        actionEvent.setAction(BaseActionEvent.DISMISS_LOADING_DIALOG);
+        actionLiveData.setValue(actionEvent);
     }
 
     @Override
     public void showToast(String message) {
-        BaseActionEvent baseActionEvent = new BaseActionEvent(BaseActionEvent.SHOW_TOAST);
-        baseActionEvent.setMessage(message);
-        actionLiveData.setValue(baseActionEvent);
+        actionEvent.setAction(BaseActionEvent.SHOW_TOAST);
+        actionEvent.setMessage(message);
+        actionLiveData.setValue(actionEvent);
     }
 
     @Override
     public void finish() {
-        actionLiveData.setValue(new BaseActionEvent(BaseActionEvent.FINISH));
+        actionEvent.setAction(BaseActionEvent.FINISH);
+        actionLiveData.setValue(actionEvent);
     }
 
     @Override
     public void finishWithResultOk() {
-        actionLiveData.setValue(new BaseActionEvent(BaseActionEvent.FINISH_WITH_RESULT_OK));
+        actionEvent.setAction(BaseActionEvent.FINISH_WITH_RESULT_OK);
+        actionLiveData.setValue(actionEvent);
     }
 
     @Override

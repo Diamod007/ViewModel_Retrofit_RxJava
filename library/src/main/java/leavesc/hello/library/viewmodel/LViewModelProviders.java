@@ -14,13 +14,13 @@ import android.support.v4.app.FragmentActivity;
  */
 public class LViewModelProviders {
 
-    public static <T extends BaseViewModel> T of(@NonNull FragmentActivity activity, Class<T> modelClass) {
+    public static <T extends BaseViewModel> T of(@NonNull FragmentActivity activity, @NonNull Class<T> modelClass) {
         T t = ViewModelProviders.of(activity).get(modelClass);
         t.setLifecycleOwner(activity);
         return t;
     }
 
-    public static <T extends BaseViewModel> T of(@NonNull Fragment activity, Class<T> modelClass) {
+    public static <T extends BaseViewModel> T of(@NonNull Fragment activity, @NonNull Class<T> modelClass) {
         T t = ViewModelProviders.of(activity).get(modelClass);
         t.setLifecycleOwner(activity);
         return t;

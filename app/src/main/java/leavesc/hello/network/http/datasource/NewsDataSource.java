@@ -2,8 +2,8 @@ package leavesc.hello.network.http.datasource;
 
 import leavesc.hello.library.http.BaseRemoteDataSource;
 import leavesc.hello.library.http.callback.RequestCallback;
-import leavesc.hello.library.http.config.HttpConfig;
 import leavesc.hello.library.viewmodel.BaseViewModel;
+import leavesc.hello.network.http.config.HttpConfig;
 import leavesc.hello.network.http.datasource.base.INewsDataSource;
 import leavesc.hello.network.http.service.ApiService;
 import leavesc.hello.network.model.NewsPack;

@@ -3,6 +3,7 @@ package leavesc.hello.network.http.datasource;
 import leavesc.hello.library.http.BaseRemoteDataSource;
 import leavesc.hello.library.http.callback.RequestCallback;
 import leavesc.hello.library.viewmodel.BaseViewModel;
+import leavesc.hello.network.http.config.HttpConfig;
 import leavesc.hello.network.http.datasource.base.IWeatherDataSource;
 import leavesc.hello.network.http.service.ApiService;
 import leavesc.hello.network.model.Weather;
@@ -22,7 +23,7 @@ public class WeatherDataSource extends BaseRemoteDataSource implements IWeatherD
 
     @Override
     public void queryWeather(String cityName, RequestCallback<Weather> responseCallback) {
-        execute(getService(ApiService.class).queryWeather(cityName), responseCallback);
+        execute(getService(ApiService.class, HttpConfig.BASE_URL_WEATHER).queryWeather(cityName), responseCallback);
     }
 
 }

@@ -1,10 +1,10 @@
-package leavesc.hello.library.http.interceptor;
+package leavesc.hello.network.http.interceptor;
 
 import android.support.annotation.NonNull;
 
 import java.io.IOException;
 
-import leavesc.hello.library.http.config.HttpConfig;
+import leavesc.hello.network.http.config.HttpConfig;
 import okhttp3.Headers;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;

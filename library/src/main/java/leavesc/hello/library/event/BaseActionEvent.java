@@ -11,6 +11,8 @@ import leavesc.hello.library.event.base.BaseEvent;
  */
 public class BaseActionEvent extends BaseEvent {
 
+    public static final int DEFAULT = 0;
+
     public static final int SHOW_LOADING_DIALOG = 1;
 
     public static final int DISMISS_LOADING_DIALOG = 2;
